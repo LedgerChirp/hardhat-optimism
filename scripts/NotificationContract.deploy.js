@@ -14,17 +14,17 @@ async function main() {
   );
 
   // Send notification to Novu
-  await sendNotificationToNovu(
-    deployer.address,
-    "Hello from Optimistic Ethereum!"
-  );
+//   await sendNotificationToNovu(
+//     deployer.address,
+//     "Hello from Optimistic Ethereum!"
+//   );
 
-  // Send notification to Optimistic Ethereum
-  await notificationContract.sendNotification(
-    "Hello from Optimistic Ethereum!"
-  );
+//   // Send notification to Optimistic Ethereum
+//   await notificationContract.sendNotification(
+//     "Hello from Optimistic Ethereum!"
+//   );
 
-  console.log("Notifications sent successfully!");
+//   console.log("Notifications sent successfully!");
 }
 
 main()
