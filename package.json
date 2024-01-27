@@ -1,5 +1,5 @@
 {
-	"name": "intro-fullstack-ethereum",
+	"name": "hardhat-optimism",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -21,6 +21,8 @@
 		"rimraf": "3.0.2"
 	},
 	"dependencies": {
-		"dotenv": "^16.0.0"
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"express": "^4.18.2"
 	}
 }
