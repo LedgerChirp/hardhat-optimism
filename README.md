@@ -1,41 +1,78 @@
-# Optimism Hardhat example
+# Optify Notify SDK
 
-> Example using [Hardhat](https://hardhat.org/) toolchain to deploy to [Optimism](https://optimism.io/) L2
+The Optify Notify SDK is a JavaScript library designed for seamless integration with the Optify notification infrastructure. It enables developers to effortlessly send notifications to users on the Optify platform.
 
-## Getting started
+## Table of Contents
 
-Clone repository:
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-git clone git@github.com:miguelmota/hardhat-optimism-example.git
-cd hardhat-optimism-example/
-```
+## Installation
 
-Install dependencies:
-
-```bash
-npm install
-```
-
-Set up environment variables in `.env` (use your own):
+To integrate Optify Notify SDK into your project, install it using npm:
 
 ```bash
-PRIVATE_KEY=0x754fde3f5e60ef2c7649061e06957c29017fe21032a8017132c0078e37f6193a
-L2_NODE_URL=https://kovan.optimism.io
+npm install optify-notify-sdk
 ```
 
-Build contract OVM bytecode:
+# Getting Started
 
-```bash
-npm run build
+To begin using the Optify Notify SDK, you need an API key. Contact the Optify team to obtain your API key.
+
+## Usage
+
+### Initialization
+
+```const OptifyNotify = require('optify-notify-sdk');
+
+// Replace 'your-api-key' with your actual API key
+const optifyNotify = new OptifyNotify({
+  apiKey: 'your-api-key',
+});
 ```
 
-Deploy to L2:
+## Sending Notifications
 
-```bash
-npm run deploy
+```// Replace 'userAddress' with the recipient's Ethereum address
+const userAddress = '0x123abc';
+
+// Replace 'message' with the content of the notification
+const message = 'Hello from Optify!';
+
+// Send a notification
+optifyNotify.sendNotification(userAddress, message)
+  .then(response => {
+    console.log('Notification sent successfully:', response);
+  })
+  .catch(error => {
+    console.error('Error sending notification:', error);
+  });
 ```
+
+## API Reference
+
+OptifyNotify(options)
+Creates a new instance of the Optify Notify SDK.
+
+options (object): Configuration options.
+apiKey (string, required): Your Optify API key.
+optifyNotify.sendNotification(userAddress, message)
+Sends a notification to the specified user.
+
+userAddress (string): The Ethereum address of the notification recipient.
+message (string): The content of the notification.
+Returns a Promise that resolves when the notification is successfully sent.
+
+## Contributing
+
+We welcome contributions from the community! To contribute to the Optify Notify SDK, please follow our contribution guidelines.
 
 ## License
 
-[MIT](LICENSE)
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Please replace the placeholder values with your actual API key and customize the content further based on your specific project details. Consider adding more sections or details as needed for your Optify Notify SDK.
