@@ -1,19 +1,21 @@
 const { ethers } = require("hardhat");
-const { sendNotificationToNovu } = require("../integration/novuIntegration");
+const sendNotificationToNovu = require("../integration/novuIntegration");
+const sendNotification = require("../utils/sendNotification");
+const fetchNotification = require("../utils/fetchNotification");
+module.exports = { sendNotification, fetchNotification };
+// async function main() {
+//   const [deployer] = await ethers.getSigners();
+//   const NotificationContract = await ethers.getContractFactory(
+//     "NotificationContract"
+//   );
+//   const notificationContract = await NotificationContract.deploy();
 
-async function main() {
-  const [deployer] = await ethers.getSigners();
-  const NotificationContract = await ethers.getContractFactory(
-    "NotificationContract"
-  );
-  const notificationContract = await NotificationContract.deploy();
+//   console.log(
+//     "NotificationContract deployed to:",
+//     notificationContract.address
+//   );
 
-  console.log(
-    "NotificationContract deployed to:",
-    notificationContract.address
-  );
-
-  // Send notification to Novu
+//   // Send notification to Novu
 //   await sendNotificationToNovu(
 //     deployer.address,
 //     "Hello from Optimistic Ethereum!"
@@ -25,14 +27,14 @@ async function main() {
 //   );
 
 //   console.log("Notifications sent successfully!");
-}
+// }
 
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
+// main()
+//   .then(() => process.exit(0))
+//   .catch((error) => {
+//     console.error(error);
+//     process.exit(1);
+//   });
 
 // // scripts/deploy.js
 // const { ethers } = require("hardhat");

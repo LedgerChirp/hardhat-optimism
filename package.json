@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && hardhat compile --network optimism",
-    "deploy": "hardhat run scripts/NotificationContract.deploy.js --network optimism",
+    "deploy": "hardhat run main.js --network optimism",
     "lint": "prettier-standard --format",
     "clean": "rimraf cache artifacts"
   },
@@ -24,6 +24,7 @@
     "rimraf": "3.0.2"
   },
   "dependencies": {
-    "@novu/node": "^0.22.0"
+    "@novu/node": "^0.22.0",
+    "npmrc": "^1.1.1"
   }
 }
