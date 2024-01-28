@@ -24,7 +24,7 @@ const components = [
 
 export default function ProtocolComponent() {
 	return (
-		<div className="bg-['100%'] bg-no-repeat bg-[url('https://assets-global.website-files.com/611dbb3c82ba72fbc285d4e2/61f57be955c904bf1b84ed97_Wave%403x.png')] bg-bottom py-24 sm:py-32">
+		<div className="backgroundmesh bg-no-repeat bg-[url('https://assets-global.website-files.com/611dbb3c82ba72fbc285d4e2/61f57be955c904bf1b84ed97_Wave%403x.png')] bg-bottom py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:mx-0">
 					<h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">
