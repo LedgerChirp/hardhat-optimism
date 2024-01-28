@@ -20,7 +20,12 @@ async function sendNotification({ NotificationData }) {
 
   console.log("Notifications sent successfully!");
 }
-
+sendNotification("abcd")
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 module.exports = {
   sendNotification,
 };

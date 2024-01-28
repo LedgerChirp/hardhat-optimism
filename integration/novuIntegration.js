@@ -7,7 +7,6 @@ async function sendNotificationToNovu(userAddress, message) {
   // Create a subscriber
   const subscriberId = "mohit-aasirwal"; // Replace this with a unique user ID that matches your database.
   const identificationData = {
-    email: "mohitaasirwal@gmail.com", // optional
     data: { message }, // optional
   };
   await novu.subscribers.identify(subscriberId, identificationData);

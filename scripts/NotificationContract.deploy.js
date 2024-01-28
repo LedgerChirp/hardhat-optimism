@@ -1,59 +1,22 @@
 const { ethers } = require("hardhat");
-const sendNotificationToNovu = require("../integration/novuIntegration");
-const sendNotification = require("../utils/sendNotification");
-const fetchNotification = require("../utils/fetchNotification");
-module.exports = { sendNotification, fetchNotification };
-// async function main() {
-//   const [deployer] = await ethers.getSigners();
-//   const NotificationContract = await ethers.getContractFactory(
-//     "NotificationContract"
-//   );
-//   const notificationContract = await NotificationContract.deploy();
+const sendNotificationToNovu = require("../integration/novuIntegration.js");
+const { sendNotification } = require("../utils/sendNotification.js");
+const fetchNotification = require("../utils/fetchNotification.js");
 
-//   console.log(
-//     "NotificationContract deployed to:",
-//     notificationContract.address
-//   );
-
-//   // Send notification to Novu
-//   await sendNotificationToNovu(
-//     deployer.address,
-//     "Hello from Optimistic Ethereum!"
-//   );
-
-//   // Send notification to Optimistic Ethereum
-//   await notificationContract.sendNotification(
-//     "Hello from Optimistic Ethereum!"
-//   );
-
-//   console.log("Notifications sent successfully!");
-// }
-
-// main()
-//   .then(() => process.exit(0))
-//   .catch((error) => {
-//     console.error(error);
-//     process.exit(1);
-//   });
-
-// // scripts/deploy.js
-// const { ethers } = require("hardhat");
-
-// async function main() {
-// 	const NotificationContract = await ethers.getContractFactory(
-// 		"NotificationContract"
-// 	);
-// 	const notificationContract = await NotificationContract.deploy();
-
-// 	console.log(
-// 		"NotificationContract deployed to:",
-// 		notificationContract.address
-// 	);
-// }
-
-// main()
-// 	.then(() => process.exit(0))
-// 	.catch((error) => {
-// 		console.error(error);
-// 		process.exit(1);
-// 	});
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  // Send notification to Novu
+  await sendNotificationToNovu(
+    deployer.address,
+    "Hello from Optimistic Ethereum!"
+  );
+  await sendNotification("heelo");
+  //   await fetchNotification();
+  console.log("Notifications sent successfully!");
+}
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
