@@ -5,6 +5,7 @@ import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import App from "./App";
+import Dashboard from "./components/Dashboard";
 import Authentication from "./components/Authentication";
 
 ReactDOM.render(
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/about/:cardId" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contact" element={<div>Contact page</div>} />
         </Routes>
       </AuthProvider>
