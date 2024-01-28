@@ -14,7 +14,7 @@ const components = [
 		Url: "https://www.npmjs.com/package/optify-auth?activeTab=readme",
 	},
 	{
-		name: "Send Optimism",
+		name: "Send Optimism Token",
 		role: "Build Your Custom Send Optimisms with Optify",
 		imageUrl:
 			"https://tailwindui.com/img/category-thumbnails/application-ui/action-panels.png",
@@ -24,11 +24,11 @@ const components = [
 
 export default function ProtocolComponent() {
 	return (
-		<div className="bg-['100%'] bg-no-repeat bg-[url('https://assets-global.website-files.com/611dbb3c82ba72fbc285d4e2/61f57be955c904bf1b84ed97_Wave%403x.png')] bg-bottom py-24 sm:py-32">
+		<div className="backgroundmesh bg-no-repeat bg-[url('https://assets-global.website-files.com/611dbb3c82ba72fbc285d4e2/61f57be955c904bf1b84ed97_Wave%403x.png')] bg-bottom py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:mx-0">
-					<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-						Implement your code fast
+					<h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+						Implement your code fast with Optimism Protocol Components
 					</h2>
 				</div>
 				<ul className="mx-auto mt-20 grid max-w-2xl pb-4 grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
