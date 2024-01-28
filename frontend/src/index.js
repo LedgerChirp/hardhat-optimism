@@ -4,7 +4,6 @@ import "./index.css";
 import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./components/About";
-
 import App from "./App";
 
 ReactDOM.render(
