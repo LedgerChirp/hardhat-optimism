@@ -3,7 +3,6 @@ import "./App.css";
 import { useAuth } from "./context/AuthContext";
 import Authentication from "./components/Authentication";
 import ProtocolComponent from "./components/ProtocolComponents";
-
 const App = () => {
 	const { blockNumber } = useAuth();
 
