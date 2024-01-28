@@ -14,3 +14,26 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
+
+.layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	max-width: 69rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.navbar {
+	color: #fff;
+	height: 4rem;
+}
+
+.navbar .logo {
+	font-size: x-large;
+	font-weight: bold;
+	color: #000;
+}
