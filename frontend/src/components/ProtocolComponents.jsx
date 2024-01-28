@@ -1,3 +1,7 @@
+import Modal from "./Modal";
+import Modal2 from "./Model2";
+import Modal3 from "./Model3";
+
 const components = [
 	{
 		name: "Notification Optimism",
@@ -5,6 +9,7 @@ const components = [
 		imageUrl:
 			"https://tailwindui.com/img/category-thumbnails/application-ui/alerts.png",
 		Url: "https://www.npmjs.com/package/optify-notify?activeTab=readme",
+		modelComponent: Modal,
 	},
 	{
 		name: "Auth Optimism",
@@ -12,6 +17,7 @@ const components = [
 		imageUrl:
 			"https://tailwindui.com/img/category-thumbnails/application-ui/media-objects.png",
 		Url: "https://www.npmjs.com/package/optify-auth?activeTab=readme",
+		modelComponent: Modal2,
 	},
 	{
 		name: "Send Optimism Token",
@@ -19,6 +25,7 @@ const components = [
 		imageUrl:
 			"https://tailwindui.com/img/category-thumbnails/application-ui/action-panels.png",
 		Url: "https://www.npmjs.com/package/optify-send?activeTab=readme",
+		modelComponent: Modal3,
 	},
 ];
 
@@ -34,19 +41,18 @@ export default function ProtocolComponent() {
 				<ul className="mx-auto mt-20 grid max-w-2xl pb-4 grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 					{components.map((component) => (
 						<li key={component.name} className="bg-white rounded-md pb-4">
-							<a href={component.Url}>
-								<img
-									className="aspect-[3/2] w-full rounded-2xl object-cover"
-									src={component.imageUrl}
-									alt=""
-								/>
-								<h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 px-4">
-									{component.name}
-								</h3>
-								<p className="text-base leading-7 text-gray-600 px-4">
-									{component.role}
-								</p>
-							</a>
+							<img
+								className="aspect-[3/2] w-full rounded-2xl object-cover"
+								src={component.imageUrl}
+								alt=""
+							/>
+							<h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 px-4">
+								{component.name}
+							</h3>
+							<p className="text-base leading-7 text-gray-600 px-4">
+								{component.role}
+							</p>
+							{component.modelComponent && <component.modelComponent />}
 						</li>
 					))}
 				</ul>
